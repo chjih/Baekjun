@@ -19,5 +19,6 @@ public class _4948 {
             else System.out.println(count);
             n=sc.nextInt();
         }
+        sc.close();
     }
 }

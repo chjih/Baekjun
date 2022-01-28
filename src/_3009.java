@@ -10,6 +10,6 @@ public class _3009 {
         if(y1==y2) System.out.print(y3);
         else if(y1==y3) System.out.print(y2);
         else if(y2==y3) System.out.print(y1);
-
+        sc.close();
     }
 }

@@ -7,5 +7,6 @@ public class _1085 {
         min1=((w-x)>x)?x:w-x;
         min2=((h-y)>y)?y:h-y;
         System.out.println(Math.min(min1, min2));
+        sc.close();
     }
 }

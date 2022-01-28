@@ -5,12 +5,10 @@ public class _9020 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int b1=0, b2=0, gap, k, d;
-        boolean bool;
         for(int i=0; i<n; i++){
             int a = sc.nextInt();
             gap=a;
             for(int j=2; j<a; j++){
-                bool=true;
                 for(k=2; k<=Math.sqrt(j); k++){
                     if(j%k==0){
                         break;
@@ -36,5 +34,6 @@ public class _9020 {
             }
             System.out.println((b1-b2>0)?b2+" "+b1:b1+" "+b2);
         }
+        sc.close();
     }
 }

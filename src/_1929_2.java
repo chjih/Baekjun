@@ -23,5 +23,6 @@ public class _1929_2 {
         for(int i=0; i<b-a+1; i++){
             if(array[i]!=-1) System.out.println(i+a);
         }
+        sc.close();
     }
 }

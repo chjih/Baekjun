@@ -12,5 +12,6 @@ public class _2675 {
             }
             System.out.println("");
         }
+        sc.close();
     }
 }

@@ -15,5 +15,6 @@ public class _1929 {
             }
             if(k!=1) System.out.println(k);
         }
+        sc.close();
     }
 }
