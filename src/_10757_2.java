@@ -7,5 +7,6 @@ public class _10757_2 {
         BigInteger A = sc.nextBigInteger();
         BigInteger B = sc.nextBigInteger();
         System.out.println(A.add(B));
+        sc.close();
     }
 }
