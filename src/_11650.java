@@ -2,29 +2,24 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-class XY implements Comparable{
+class XY implements Comparable<XY>{
     int X;
     int Y;
     public XY(int x, int y){
         X = x;
         Y = y;
     }
-
-    @Override
-    public int compareTo(Object o) {
-        XY O = (XY) o;
-        if(this.X < O.X) return -1;
-        else if(this.X == O.X){
-            if(this.Y < O.Y) return -1;
-            else if(this.Y==O.Y) return 0;
-            else return 1;
-        } else return 1;
-    }
-
     public void getXY(){
         System.out.println(X+" "+Y);
     }
+
+    @Override
+    public int compareTo(XY o) {
+        if(this.X==o.X) return this.Y-o.Y;
+        else return this.X-o.X;
+    }
 }
+
 public class _11650 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
