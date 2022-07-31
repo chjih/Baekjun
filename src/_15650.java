@@ -1,29 +1,27 @@
 import java.util.Scanner;
 
-public class _15649 {
+public class _15650 {
     private static int[] number;
     private static boolean[] visited;
-    private static int n;
-    private static int m;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-        m = sc.nextInt();
+        int n = sc.nextInt();
+        int m = sc.nextInt();
         number = new int[m];
         visited = new boolean[n];
-        bt(0);
+
+        bt(n, m, 0);
     }
 
-    private static void bt(int index) {
+    public static void bt(int n, int m, int index) {
         if (index == m) {
             for (int i = 0; i < m; i++) {
-                System.out.print((number[i] + 1) + " ");
+                System.out.print(number[i] + 1 + " ");
             }
             System.out.println();
             return;
         }
-
         for (int i = 0; i < n; i++) {
             if (visited[i]) {
                 continue;
@@ -31,9 +29,10 @@ public class _15649 {
 
             number[index] = i;
             visited[i] = true;
-            bt(index + 1);
-            // 자식 노드 방문이 끝나고 돌아오면 방문 노드를 방문하지 않은 상태로 변경함
-            visited[i] = false;
+            bt(n, m, index + 1);
+            for (int j = i + 1; j < n; j++) {
+                visited[j] = false;
+            }
         }
     }
 }
