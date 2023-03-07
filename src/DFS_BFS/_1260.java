@@ -24,7 +24,7 @@ public class _1260 {
             a = sc.nextInt();
             b = sc.nextInt();
 
-            arr[a][b] = arr[a][b] = 1;
+            arr[a][b] = arr[b][a] = 1;
         }
         dfs(v);
         System.out.println();
@@ -34,27 +34,29 @@ public class _1260 {
         sc.close();
     }
 
-    public static void bfs(int v) {
+    public static void dfs(int v) {
         visit[v] = 1;
         System.out.print(v + " ");
 
         for (int i = 1; i < arr[v].length; i++) {
             if (arr[v][i] == 1 && visit[i] != 1)
-                bfs(i);
+                dfs(i);
         }
     }
 
-    public static void dfs(int v) {
+    public static void bfs(int v) {
         queue.add(v);
+        visit[v] = 1;
 
         while (!queue.isEmpty()) {
             v = queue.poll();
-            visit[v] = 1;
             System.out.print(v + " ");
 
             for (int i = 1; i < arr[v].length; i++) {
-                if (arr[v][i] == 1 && visit[i] != 1)
+                if (arr[v][i] == 1 && visit[i] != 1){
                     queue.add(i);
+                    visit[i]=1;
+                }
             }
         }
     }
